@@ -8,6 +8,7 @@ lapply(packages, library, character.only = TRUE)
 dat<-data.frame(id=numeric(),trial=numeric(), x=numeric(), y=numeric(), z=numeric(), out=numeric(), cond=numeric())
 for (idn in 1:nrow(d)){
   myjson<-fromJSON(paste(d$V10[idn]))
+  names(myjson)
   for (i in 14:35){
     dd<-unlist(strsplit( myjson[[i]], ";"))[1:4]
     dd<-as.numeric(dd)

@@ -3,7 +3,7 @@ library(MCMCpack)
 dat<-read.csv("/home/hanshalbe/MTT/activeMTT.csv")
 opts<-expand.grid(x=2:4, y=2:4, z=2:4)
 
-for (idn in 1:45){
+for (idn in 32:45){
 
   dp<-subset(dat, id==idn)
   dp<-dp[,4:7]
